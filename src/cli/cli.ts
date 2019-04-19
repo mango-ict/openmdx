@@ -42,6 +42,10 @@ class Cli {
         });
     }
 
+    pwd() {
+        console.log(__dirname);
+    }
+
     init() {
         clear();
         let intro = new Intro();

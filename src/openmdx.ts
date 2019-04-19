@@ -18,6 +18,7 @@
 */
 /*global console, process, module, require */
 import { Cli } from "./cli/cli";
+var pjson = require('../package.json');
 
 class SystemOpenMDX {
 
@@ -32,7 +33,10 @@ class SystemOpenMDX {
             process.argv.forEach(function (val, index, array) {
                 switch (val) {
                     case "--version":
-                        console.log("current version is 1.0.0");
+                        console.log("current version is: " + pjson.version);
+                        break;
+                    case "pwd":
+                        cli.pwd();
                         break;
                     case "init":
                         cli.init();
