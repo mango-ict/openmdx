@@ -99,7 +99,7 @@ class Cli {
         });
     }
 
-    build() {
+    fetch() {
         clear();
         let intro = new Intro();
         intro.show(resource.CLI_INFO, () => {

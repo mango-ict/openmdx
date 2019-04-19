@@ -1,6 +1,6 @@
 {
   "name": "openmdx",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "preferGlobal": true,
   "description": "The OpenMDX tools allow you to export your Mendix Model to seperate open source alternatives.",
   "main": "./bin/openmdx",
