@@ -1,6 +1,6 @@
 {
   "name": "openmdx",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "preferGlobal": true,
   "description": "The OpenMDX tools allow you to export your Mendix Model to seperate open source alternatives.",
   "main": "./bin/openmdx",
@@ -34,6 +34,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "clear": "^0.1.0",
+    "dotenv": "^7.0.0",
     "figlet": "^1.2.1",
     "mendixmodelsdk": "^4.19.0",
     "mendixplatformsdk": "^4.1.0",

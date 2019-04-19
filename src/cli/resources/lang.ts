@@ -30,7 +30,8 @@ interface IResourcesContent {
     CLI_SLOGAN:string,
     CLI_HELP_ASSIST:string,
     CLI_LOGIN_CREDENTIALS:string,
-    CLI_PROJECT_SETTINGS:string
+    CLI_PROJECT_SETTINGS:string,
+    CLI_FETCH:string
 }
 
 class Resources implements IResources {
@@ -43,7 +44,8 @@ class Resources implements IResources {
             CLI_SLOGAN: "We let you export your Mendix Model to full blown open source applications",
             CLI_HELP_ASSIST: "When you want more information please add --help as your first parameter.",
             CLI_LOGIN_CREDENTIALS: "Please enter your login credentials",
-            CLI_PROJECT_SETTINGS: "Please enter project settings"
+            CLI_PROJECT_SETTINGS: "Please enter project settings",
+            CLI_FETCH: "We will start fetching your Mendix project"
         };
 
         let resources:IResourcesValues = {

@@ -41,6 +41,9 @@ class SystemOpenMDX {
                     case "init":
                         cli.init();
                         break;
+                    case "build":
+                        cli.build();
+                        break;
                     case "push":
                         cli.push();
                         break;
