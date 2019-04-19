@@ -1,2 +1,2 @@
 # openmdx
-The openmdx is a new project to Explore the posibilities of the Mendix and Platform SDK.
+The OpenMDX tools allow you to export your Mendix Model to seperate open source alternatives.
