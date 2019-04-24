@@ -36,10 +36,11 @@ class MXModelSDK {
             let i: any;
             try {
                 for (i in pageModels) {
-                    const pageModel = await loadAsPromise(pageModels[i]);
-                    let pagePath = modulePath + "/" + pageModel.name + '.json';
-                    fs.writeFileSync(pagePath, JSON.stringify(pageModel));
-                    console.log('Written page: ' + getModule(pageModel).name + '/' + pageModel.name + '.json');
+                    await loadAsPromise(pageModels[i]).then((pageModel) => {
+                        let pagePath = modulePath + "/" + pageModel.name + '.js';
+                        fs.writeFileSync(pagePath, JavaScriptSerializer.serializeToJs(pageModel));
+                        console.log('Written page: ' + getModule(pageModel).name + '/' + pageModel.name + '.js');
+                    });
                 }
             } catch (error) {
                 console.log(`error: ${error}`);
@@ -47,10 +48,11 @@ class MXModelSDK {
 
             try {
                 for (i in layoutModels) {
-                    const layoutModel = await loadAsPromise(layoutModels[i]);
-                    let layoutPath = modulePath + "/Layout_" + layoutModel.name + '.json';
-                    fs.writeFileSync(layoutPath, JSON.stringify(layoutModel));
-                    console.log('Written layout: ' + getModule(layoutModel).name + '/Layout_' + layoutModel.name + '.json');
+                    await loadAsPromise(layoutModels[i]).then((layoutModel) => {
+                    let layoutPath = modulePath + "/Layout_" + layoutModel.name + '.js';
+                    fs.writeFileSync(layoutPath, JavaScriptSerializer.serializeToJs(layoutModel));
+                    console.log('Written layout: ' + getModule(layoutModel).name + '/Layout_' + layoutModel.name + '.js');
+                    });
                 }
             } catch (error) {
                 console.log(`error: ${error}`);
